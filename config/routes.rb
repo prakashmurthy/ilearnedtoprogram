@@ -1,6 +1,6 @@
 Ilearnedtoprogram::Application.routes.draw do
   root :to => "quotes#show"
-  resources :quotes, :only => [:new, :create, :index]
+  resources :quotes, :only => [:new, :create, :index, :destroy]
   
   
   # The priority is based upon order of creation:

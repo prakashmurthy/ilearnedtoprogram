@@ -20,4 +20,10 @@ class QuotesController < ApplicationController
   def index
     @quotes = Quote.all
   end
+  
+  def destroy
+    quote = Quote.find(params[:id])
+    quote.destroy
+    redirect_to quotes_path
+  end
 end

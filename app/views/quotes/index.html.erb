@@ -3,6 +3,7 @@
   <div>
     <p>Name: <%= link_to quote.name, quote.url %>;  { <%= link_to quote.email, "mailto:#{quote.email}" %> }</p>
     <p><%= quote.quote_text %></p>
+    <p><%= button_to 'Delete quote', quote, :method => :delete, :confirm => 'Are you sure?' %></p>
   </div>
   <hr/>
 <% end %>
