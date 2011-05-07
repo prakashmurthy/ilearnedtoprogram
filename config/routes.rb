@@ -1,11 +1,8 @@
 Ilearnedtoprogram::Application.routes.draw do
-  get "quotes/show"
-
-  get "quotes/new"
-
-  get "quotes/create"
-
-  root :to => "quotes#show"
+  root :to => "quotes#index"
+  resources :quotes, :only => [:new, :create]
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,2 +1,27 @@
-<h1>Quotes#new</h1>
-<p>Find me in app/views/quotes/new.html.erb</p>
+<h1>I learned to program... </h1>
+
+<%= form_for(@quote) do |f| %>
+  <% @quote.errors.full_messages.each do |msg| %>
+    <div><%= msg %></div>
+  <% end %>
+  <div>
+    <%= f.text_area :quote_text,  :rows => 5 %>
+  </div>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>  
+  <div>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.submit "Submit quote" %>
+  </div>
+<% end %>
+
+<%= link_to 'Home', root_path %>
