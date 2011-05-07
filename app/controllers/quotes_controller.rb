@@ -16,5 +16,8 @@ class QuotesController < ApplicationController
       render :action => "new" 
     end
   end
-
+  
+  def index
+    @quotes = Quote.all
+  end
 end
