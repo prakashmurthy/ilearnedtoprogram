@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def show
-    offset = rand(Quote.count)
+    offset = rand(Quote.count).to_i
     @quote = Quote.first(:offset => offset)
   end
 

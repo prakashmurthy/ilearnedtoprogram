@@ -1,6 +1,8 @@
 <h1>I learned to program... </h1>
-<p><%= @quote.quote_text %></p>
-<p>- <%= link_to @quote.name, @quote.url %></p>
+<% if @quote.present? %>
+  <p><%= @quote.quote_text %></p>
+  <p>- <%= link_to @quote.name, @quote.url %></p>
+<% end %>
 <hr />
 <p>Submit your own <%= link_to "quote", new_quote_path %></p>
 <p>Administer the <%= link_to "site", quotes_path %></p>
