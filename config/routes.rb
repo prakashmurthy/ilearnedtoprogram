@@ -1,4 +1,6 @@
 Ilearnedtoprogram::Application.routes.draw do
+  devise_for :users
+
   root :to => "quotes#show"
   resources :quotes, :only => [:new, :create, :index, :destroy]
   
