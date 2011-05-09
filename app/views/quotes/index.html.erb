@@ -1,10 +1,23 @@
-<h1>I learned to program...</h1>
-<% @quotes.each do |quote| %>
-  <div>
-    <p>Name: <%= link_to quote.name, quote.url %>;  { <%= link_to quote.email, "mailto:#{quote.email}" %> }</p>
-    <p><%= quote.quote_text %></p>
-    <p><%= button_to 'Delete quote', quote, :method => :delete, :confirm => 'Are you sure?' %></p>
-  </div>
-  <hr/>
-<% end %>
+<table class="admin_table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>URL</th>
+      <th>Quote</th>
+      <th/>
+    </tr>
+  </thead>
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= link_to quote.name, quote.url %></td>
+        <td><%= link_to quote.email, "mailto:#{quote.email}" %></td>
+        <td><%= link_to quote.url, quote.url %></td>
+        <td><%= quote.quote_text %></td>
+        <td><%= button_to 'Delete quote', quote, :method => :delete, :confirm => 'Are you sure?' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
     

@@ -1,27 +1,29 @@
-<h1>I learned to program... </h1>
-
 <%= form_for(@quote) do |f| %>
-  <% @quote.errors.full_messages.each do |msg| %>
-    <div><%= msg %></div>
+  <% if @quote.errors.full_messages.any? %>
+    <div class="error">
+      <% @quote.errors.full_messages.each do |msg| %>
+        <div><span class="icon">&cross; </span><%= msg %></div>
+      <% end %>
+    </div>
   <% end %>
-  <div>
+  <div class="quote_text">
     <%= f.text_area :quote_text,  :rows => 5 %>
   </div>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>  
-  <div>
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
+  <table >
+    <tr>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>  
+    <tr>
+      <td><%= f.label :url %></td>
+      <td><%= f.text_field :url %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+  </table>
   <div>
     <%= f.submit "Submit quote" %>
   </div>
 <% end %>
-
-<%= link_to 'Home', root_path %>

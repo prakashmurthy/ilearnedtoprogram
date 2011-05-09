@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    margin-left: 25px;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -220px;
+}
+.footer, .push {
+    height: 220px;
+}
+
+body {
+    color: #000000;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: left;
+    width: 800px;
+    font-size: 18px;
+}
+
+a {
+    color: #cc0000;
+    text-decoration: none;
+}
+
+#answer a, #prompt a {
+    color: #000000;
+}
+
+a#person {
+    color: #cc0000;
+}
+
+a#person:hover, .footer a:hover {
+    text-decoration: underline;
+}
+
+#prompt, #answer {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#prompt {
+    padding-top: 80px;
+}
+
+#answer {
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.footer p {
+    padding-top: 10px;
+}
+
+#fineprint {
+    font-size: 12px;
+}
+
+.quote_text {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; 
+}
+
+.quote_text textarea {
+  width: 90%; 
+}
+
+.error {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 2px dashed red;
+  padding: 0.5em;
+  padding-left: 2em;
+  width: 60%;
+}
+
+.error .icon {
+  color: red;
+}
+
+.admin_table {
+  font-size: 80%;
+}
+
+.admin_table thead {
+  background-color: #cc0000;
+  color: white;
+}
+
+.admin_table th, td {
+  padding: 0.5em;  
+}

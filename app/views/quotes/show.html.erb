@@ -1,7 +1,8 @@
-<h1>I learned to program... </h1>
 <% if @quote.present? %>
-  <p><%= @quote.quote_text %></p>
-  <p>- <%= link_to @quote.name, @quote.url %></p>
+  <div id="answer"> 
+  <%= @quote.quote_text %><br/>
+  &mdash;&nbsp;<%= link_to @quote.name, @quote.url, :id => "person" %>
+  </div>
 <% end %>
 <hr />
 <p>Submit your own <%= link_to "quote", new_quote_path %></p>
