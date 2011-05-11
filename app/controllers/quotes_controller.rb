@@ -2,8 +2,12 @@ class QuotesController < ApplicationController
   before_filter :authenticate_user!, :only => [:index, :destroy]
   
   def show
-    offset = rand(Quote.count).to_i
-    @quote = Quote.first(:offset => offset)
+    if params[:id]
+      @quote = Quote.find_by_uuid(params[:id])
+    else
+      offset = rand(Quote.count).to_i
+      @quote = Quote.first(:offset => offset)
+    end
   end
 
   def new

@@ -3,7 +3,7 @@ Ilearnedtoprogram::Application.routes.draw do
 
   root :to => "quotes#show"
   resources :quotes, :only => [:new, :create, :index, :destroy]
-  
+  match 'id/:id' => 'quotes#show', :as => :uuid
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

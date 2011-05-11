@@ -4,7 +4,7 @@ class AddUuidToQuote < ActiveRecord::Migration
     add_index :quotes, :uuid, :unique => true
     
     Quote.all.each do |quote|
-      quote.uuid = UUIDTools::UUID.timestamp_create.hexdigest
+      quote.generate_uuid
       quote.save
     end
   end
