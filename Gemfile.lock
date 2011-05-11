@@ -83,6 +83,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
+    uuidtools (2.1.2)
     warden (1.0.4)
       rack (>= 1.0)
 
@@ -94,3 +95,4 @@ DEPENDENCIES
   heroku (= 2.0.5)
   rails (= 3.0.7)
   sqlite3-ruby
+  uuidtools (= 2.1.2)

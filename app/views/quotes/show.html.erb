@@ -1,9 +1,10 @@
 <% if @quote.present? %>
   <div id="answer"> 
-  <%= @quote.quote_text %><br/>
+  <%= link_to @quote.quote_text, root_path %><br/>
   &mdash;&nbsp;<%= link_to @quote.name, @quote.url, :id => "person" %>
   </div>
 <% end %>
 <hr />
 <p>Submit your own <%= link_to "story", new_quote_path %></p>
 <p>Administer the <%= link_to "site", quotes_path %></p>
+<p>Referencing this story? <%= link_to "Use the permalink", uuid_path(@quote.uuid) %>

@@ -7,5 +7,9 @@ class Quote < ActiveRecord::Base
   validates :email, :length => {:minimum => 3, :maximum => 254},
                     :uniqueness => true,
                     :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+  before_create :generate_uuid
   
+  def generate_uuid
+    self.uuid = UUIDTools::UUID.timestamp_create.hexdigest
+  end
 end

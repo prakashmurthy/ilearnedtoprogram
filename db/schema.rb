@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110509213641) do
+ActiveRecord::Schema.define(:version => 20110511035948) do
 
   create_table "quotes", :force => true do |t|
     t.text     "quote_text"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(:version => 20110509213641) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "uuid"
   end
+
+  add_index "quotes", ["uuid"], :name => "index_quotes_on_uuid", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                              :default => "", :null => false
