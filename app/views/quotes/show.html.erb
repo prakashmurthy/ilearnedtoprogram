@@ -1,6 +1,6 @@
 <% if @quote.present? %>
   <div id="answer"> 
-  <%= @quote.quote_text %><br/>
+  <%= link_to @quote.quote_text, root_path %><br/>
   &mdash;&nbsp;<%= link_to @quote.name, @quote.url, :id => "person" %>
   </div>
 <% end %>
