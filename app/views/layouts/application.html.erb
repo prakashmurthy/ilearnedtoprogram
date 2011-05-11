@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ilearnedtoprogram</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-  <% if notice %>
-    <p id="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
-  <div>
-    The functionality of this site is the same as <a href="http://ilearnedtoprogram.com/">http://ilearnedtoprogram.com/</a>. <br/>
-    If you want to contribute a quote to this project, please head over to the <a href="http://ilearnedtoprogram.com/">original site.</a><br/>
-  </div>
-  <div id="prompt"> 
-  <a href="/">I learned to program...</a> 
-  </div>
-<%= yield %>
-  <% if user_signed_in? %>
-    <p><%= link_to "Logout", destroy_user_session_path %></p>
-  <% end %>
-  <hr/>
-  <div>
-    Created by <a href="https://twitter.com/_prakash">Prakash Murthy</a> & <a href="https://twitter.com/benatkin">Ben Atkin</a>. Source code on <a href="https://github.com/prakashmurthy/ilearnedtoprogram">Github</a>
-</body>
+  <head>
+    <title>Ilearnedtoprogram</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <% if notice %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <div>
+      The functionality of this site is the same as <a href="http://ilearnedtoprogram.com/">http://ilearnedtoprogram.com/</a>. <br/>
+      If you want to contribute a quote to this project, please head over to the <a href="http://ilearnedtoprogram.com/">original site.</a><br/>
+    </div>
+    <div id="prompt"> 
+      <a href="/">I learned to program...</a> 
+    </div>
+    <%= yield %>
+    <% if user_signed_in? %>
+      <p><%= link_to "Logout", destroy_user_session_path %></p>
+    <% end %>
+    <hr/>
+    <div>
+      Created by <a href="https://twitter.com/_prakash">Prakash Murthy</a> & <a href="https://twitter.com/benatkin">Ben Atkin</a>. Source code on <a href="https://github.com/prakashmurthy/ilearnedtoprogram">Github</a>.
+    </div>
+  </body>
 </html>
