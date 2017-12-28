@@ -1,7 +1,8 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+ruby '1.9.3'
 
-gem 'rails', '3.0.7'
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'rails', '3.0.20'
+gem 'pg'
 gem 'heroku', '2.0.5'
-gem 'devise', '1.3.4'
-gem 'uuidtools', '2.1.2'
+gem 'devise', '1.5.4'
+gem 'uuidtools', '2.1.5'
